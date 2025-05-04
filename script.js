@@ -139,9 +139,14 @@ function updateKeyboard(letter, state) {
     const keys = document.querySelectorAll('.key');
     keys.forEach(key => {
         if (key.textContent.toLowerCase() === letter) {
-            if (!key.classList.contains('correct')) {
-                key.classList.add(state);
+            // Don't downgrade the state from present to absent if two letters are guessed and only one is present
+            if (state === 'absent' && key.classList.contains('present')) {
+                return;
             }
+            // Remove any existing state classes
+            key.classList.remove('correct', 'present', 'absent');
+            // Add the new state
+            key.classList.add(state);
         }
     });
 }
