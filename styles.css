@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.game-board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.tile {
+    aspect-ratio: 1;
+    border: 2px solid #d3d6da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    max-width: 100%;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.key {
+    min-width: 30px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d6da;
+    color: #1a1a1a;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex: 1;
+    max-width: 40px;
+    touch-action: manipulation;
+}
+
+.key:hover {
+    background-color: #c0c3c7;
+}
+
+#backspace {
+    min-width: 50px;
+    max-width: 60px;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    min-height: 30px;
+    color: #ff6b6b;
+}
+
+.difficulty-selector {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.difficulty-selector select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid #d3d6da;
+    font-size: 1em;
+    background-color: white;
+    min-width: 120px;
+}
+
+.difficulty-selector button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6aaa64;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.difficulty-selector button:hover {
+    background-color: #5a9a54;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .tile {
+        font-size: 1.5em;
+    }
+
+    .key {
+        height: 45px;
+        font-size: 1em;
+        max-width: 35px;
+    }
+
+    #backspace {
+        min-width: 45px;
+        max-width: 50px;
+    }
+
+    .difficulty-selector {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .difficulty-selector select,
+    .difficulty-selector button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .mobile-submit {
+        display: block;
+    }
+}
+
+/* Tile states */
+.tile.correct {
+    background-color: #6aaa64;
+    color: white;
+    border-color: #6aaa64;
+}
+
+.tile.present {
+    background-color: #c9b458;
+    color: white;
+    border-color: #c9b458;
+}
+
+.tile.absent {
+    background-color: #787c7e;
+    color: white;
+    border-color: #787c7e;
+}
+
+/* Keyboard states */
+.key.correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.key.present {
+    background-color: #c9b458;
+    color: white;
+}
+
+.key.absent {
+    background-color: #787c7e;
+    color: white;
+}
+
+.mobile-submit {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 16px auto 0 auto;
+    padding: 14px 0;
+    background-color: #6aaa64;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mobile-submit:active,
+.mobile-submit:hover {
+    background-color: #5a9a54;
+} 

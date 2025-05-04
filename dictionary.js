@@ -1,0 +1,102 @@
+//const EASIEST_WORDS = [
+//    'baby', 'ball', 'bear', 'bird', 'book', 'cake', 'candy', 'card', 'cart', 'cats',
+//    'coat', 'cows', 'dogs', 'doll', 'door', 'duck', 'fish', 'frog', 'game', 'girl', 'hand',
+//      'hats', 'home', 'jump', 'kite', 'lamp', 'leaf', 'lion', 'milk', 'moon', 'nose',
+//    'park', 'pink', 'play', 'rain', 'ring', 'rose', 'sand', 'shoe', 'snow', 'star',
+//    'suns', 'swim', 'tree', 'toys', 'walk', 'wave', 'wind', 'wise', 'zone'
+//]; 
+
+
+// ---------- Easy tier (569 words) ----------
+const EASY_WORDS = [
+    'able', 'acid', 'aged', 'also', 'area', 'ball', 'band', 'bare', 'barn', 'base', 'bath',
+    'bear', 'beat', 'beef', 'been', 'beep', 'beer', 'bees', 'bell', 'belt', 'bend', 'best',
+    'bill', 'bind', 'bird', 'bite', 'bits', 'blue', 'boat', 'boil', 'bold', 'bolt', 'bone',
+    'boom', 'boot', 'born', 'boss', 'both', 'bulb', 'bull', 'bump', 'buns', 'burn', 'bush',
+    'cage', 'calf', 'call', 'calm', 'came', 'camp', 'cane', 'cape', 'card', 'care', 'carp',
+    'cart', 'case', 'cash', 'cast', 'cats', 'chat', 'chin', 'chip', 'chop', 'city', 'clap',
+    'claw', 'clay', 'clip', 'club', 'coal', 'coat', 'code', 'cold', 'comb', 'come', 'cone',
+    'cook', 'cool', 'copy', 'cord', 'corn', 'cost', 'cows', 'crab', 'crew', 'crop', 'crow',
+    'cube', 'curl', 'cute', 'dart', 'data', 'date', 'dawn', 'days', 'deal', 'dear', 'deer',
+    'desk', 'dice', 'dime', 'dine', 'dirt', 'dish', 'disk', 'dive', 'dock', 'does', 'dogs',
+    'doll', 'dome', 'done', 'door', 'down', 'draw', 'drop', 'drum', 'duck', 'dude', 'dust',
+    'each', 'earn', 'ease', 'east', 'easy', 'edge', 'eggs', 'else', 'exit', 'face', 'fact',
+    'fail', 'fair', 'fall', 'farm', 'fast', 'fate', 'fear', 'feed', 'feel', 'feet', 'fell',
+    'file', 'fill', 'film', 'find', 'fine', 'fire', 'firm', 'fish', 'five', 'flag', 'flat',
+    'flip', 'flow', 'foam', 'fold', 'food', 'fool', 'foot', 'form', 'fort', 'four', 'free',
+    'frog', 'from', 'fuel', 'full', 'gala', 'game', 'gate', 'gave', 'gear', 'gift', 'girl',
+    'give', 'glad', 'glow', 'glue', 'goal', 'goat', 'gold', 'golf', 'gone', 'good', 'goon',
+    'gown', 'gram', 'gray', 'grin', 'grip', 'grow', 'gums', 'hair', 'half', 'hall', 'hand',
+    'hang', 'hare', 'hash', 'have', 'head', 'heal', 'heap', 'hear', 'heat', 'heel', 'held',
+    'help', 'herd', 'hero', 'hide', 'high', 'hike', 'hill', 'hint', 'hire', 'hive', 'hold',
+    'hole', 'holy', 'home', 'hood', 'hook', 'hoop', 'hoot', 'hope', 'horn', 'hose', 'host',
+    'hour', 'huge', 'hung', 'hunt', 'hurt', 'idea', 'idle', 'inch', 'iron', 'item', 'jump',
+    'just', 'keen', 'keep', 'kept', 'kick', 'kids', 'kind', 'king', 'kiss', 'kite', 'know',
+    'lace', 'lack', 'lady', 'lake', 'lamb', 'lamp', 'land', 'lane', 'last', 'late', 'lava',
+    'lawn', 'lead', 'leaf', 'leak', 'lean', 'leap', 'left', 'lend', 'less', 'lick', 'life',
+    'lift', 'like', 'limb', 'line', 'link', 'lion', 'lips', 'list', 'live', 'load', 'loan',
+    'lock', 'loft', 'logo', 'long', 'look', 'loom', 'loop', 'lord', 'lose', 'loss', 'loud',
+    'love', 'luck', 'lump', 'made', 'mail', 'main', 'make', 'male', 'many', 'mare', 'mark',
+    'mask', 'mass', 'mate', 'math', 'maze', 'meal', 'mean', 'meat', 'meet', 'melt', 'menu',
+    'mere', 'mess', 'mice', 'mile', 'milk', 'mind', 'mini', 'mint', 'miss', 'mist', 'mode',
+    'mold', 'mole', 'monk', 'moon', 'moor', 'mood', 'move', 'mule', 'muse', 'name', 'navy',
+    'near', 'neck', 'need', 'nest', 'news', 'next', 'nice', 'nine', 'none', 'noon', 'nose',
+    'note', 'obey', 'okay', 'once', 'only', 'open', 'oven', 'over', 'pack', 'page', 'paid',
+    'pain', 'pair', 'palm', 'pans', 'park', 'part', 'pass', 'past', 'path', 'pave', 'peak',
+    'pear', 'peas', 'peck', 'peel', 'peer', 'pens', 'pest', 'pets', 'pick', 'pier', 'pile',
+    'pill', 'pine', 'ping', 'pink', 'pint', 'pipe', 'pits', 'plan', 'play', 'plot', 'plug',
+    'plus', 'poem', 'poet', 'poke', 'pole', 'pond', 'pony', 'pool', 'poor', 'pork', 'port',
+    'pose', 'post', 'pots', 'pour', 'pray', 'prop', 'pump', 'pure', 'push', 'race', 'rack',
+    'rage', 'rail', 'rain', 'rake', 'rang', 'rank', 'rare', 'rate', 'rave', 'read', 'real',
+    'rest', 'rice', 'rich', 'ride', 'ring', 'rise', 'risk', 'road', 'roar', 'rock', 'rode',
+    'role', 'roll', 'roof', 'room', 'root', 'rope', 'rose', 'rows', 'ruin', 'rule', 'runs',
+    'rush', 'rust', 'safe', 'said', 'sail', 'sake', 'sale', 'salt', 'same', 'sand', 'sang',
+    'sank', 'save', 'says', 'scan', 'scar', 'seal', 'seat', 'seed', 'seek', 'seem', 'seen',
+    'self', 'sell', 'send', 'sent', 'sets', 'shed', 'shin', 'ship', 'shoe', 'shop', 'shot',
+    'show', 'shut', 'side', 'sign', 'silk', 'sing', 'sink', 'site', 'size', 'skid', 'skim',
+    'skip', 'slab', 'slam', 'slap', 'sled', 'slim', 'slip', 'slug', 'snap', 'snow', 'snug',
+    'soap', 'sock', 'soft', 'soil', 'sold', 'sole', 'solo', 'some', 'song', 'soon', 'sort',
+    'soul', 'soup', 'sour', 'span', 'sped', 'spin', 'spit', 'spot', 'spun', 'stab', 'stag',
+    'star', 'stay', 'stem', 'step', 'stir', 'stop', 'stow', 'stub', 'such', 'suit', 'sure',
+    'surf', 'swam', 'swap', 'swan', 'swim', 'tack', 'taco', 'tale', 'talk', 'tall', 'tame',
+    'tank', 'tape', 'task', 'team', 'tear', 'tell', 'tend', 'tent', 'term', 'test', 'than',
+    'that', 'them', 'then', 'thin', 'this', 'tick', 'tide', 'tied', 'tier', 'tile', 'time',
+    'tiny', 'tire', 'toad', 'toes', 'told', 'toll', 'tone', 'took', 'tool', 'toon', 'tour',
+    'town', 'toys', 'tram', 'trap', 'tray', 'tree', 'trim', 'trip', 'true', 'tube', 'tuck',
+    'tune', 'turn', 'twin', 'type', 'unit', 'upon', 'used', 'user', 'uses', 'vase', 'vast',
+    'verb', 'very', 'vest', 'vibe', 'view', 'vine', 'vote', 'wade', 'wage', 'wail', 'wait',
+    'wake', 'walk', 'wall', 'want', 'ward', 'warm', 'warn', 'wash', 'wasp', 'wave', 'ways',
+    'weak', 'wear', 'weed', 'week', 'weep', 'well', 'went', 'were', 'west', 'what', 'when',
+    'wind', 'wine', 'wing', 'wink', 'wipe', 'wire', 'wise', 'wish', 'with', 'wolf', 'wood',
+    'wool', 'word', 'work', 'worm', 'wrap', 'yard', 'yawn', 'year', 'yell', 'yoga', 'yoke',
+    'yoyo', 'zero', 'zone', 'zoom'
+];
+
+// ---------- Medium tier (102 words) ----------
+const MEDIUM_WORDS = [
+    'acid', 'aged', 'bark', 'bank', 'boil', 'bolt', 'bulk', 'cave', 'cell', 'clog', 'coil',
+    'cove', 'crib', 'cuff', 'cult', 'curb', 'cure', 'dart', 'ding', 'disc', 'drip', 'dusk',
+    'duty', 'echo', 'edge', 'edit', 'eels', 'eggs', 'exam', 'fads', 'fake', 'fame', 'fang',
+    'fans', 'fare', 'fawn', 'fell', 'felt', 'fend', 'fern', 'flap', 'flaw', 'fled', 'flew',
+    'folk', 'fond', 'fore', 'fund', 'fuse', 'germ', 'glee', 'glen', 'goof', 'grid', 'gust',
+    'hail', 'halo', 'halt', 'heed', 'heft', 'helm', 'hoot', 'howl', 'hula', 'hull', 'hump',
+    'hush', 'idol', 'jail', 'jeep', 'joke', 'keen', 'knit', 'knob', 'knot', 'lame', 'lime',
+    'lure', 'lung', 'mink', 'mush', 'odds', 'onto', 'pelt', 'pout', 'prey', 'puck', 'punt',
+    'quad', 'quit', 'reef', 'rein', 'rift', 'riff', 'rosy', 'saga', 'sash', 'seam', 'sift',
+    'sill', 'silt', 'sire', 'skid', 'skim', 'spun', 'stow', 'till', 'tong', 'trek', 'trot'
+];
+
+// ---------- Hard tier (146 words) ----------
+const HARD_WORDS = [
+    'bank', 'beef', 'beep', 'boil', 'bulk', 'cave', 'cell', 'chop', 'cuff', 'cult', 'curb',
+    'dart', 'dice', 'ding', 'disc', 'drip', 'dusk', 'duty', 'echo', 'edit', 'eels', 'eggs',
+    'exam', 'fads', 'fake', 'fawn', 'fled', 'flew', 'folk', 'fuse', 'germ', 'glen', 'goof',
+    'grid', 'gust', 'hail', 'halo', 'hash', 'heft', 'helm', 'hoot', 'howl', 'hula', 'hump',
+    'hush', 'idol', 'jail', 'jazz', 'jeep', 'joke', 'knit', 'knob', 'knot', 'lame', 'lime',
+    'lure', 'lung', 'mink', 'mush', 'odds', 'onto', 'pelt', 'pout', 'puck', 'punt', 'quad',
+    'quit', 'reef', 'rein', 'riff', 'rift', 'rosy', 'ruin', 'saga', 'sash', 'sift', 'sill',
+    'silt', 'sire', 'skid', 'skim', 'slab', 'slug', 'spun', 'stow', 'swam', 'tack', 'taco',
+    'tide', 'till', 'tong', 'trot', 'turf', 'vain', 'vale', 'veil', 'vent', 'verb', 'veto',
+    'vice', 'visa', 'vibe', 'wade', 'wail', 'whim', 'whip', 'whir', 'woke', 'yule', 'zest',
+    'zips'
+];
