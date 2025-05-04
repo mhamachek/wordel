@@ -205,7 +205,7 @@ h1 {
 }
 
 .tile.absent {
-    background-color: #787c7e;
+    background-color: #787e7a;
     color: white;
     border-color: #787c7e;
 }
@@ -238,7 +238,15 @@ h1 {
     transition: background-color 0.2s;
 }
 
-.mobile-submit:active,
-.mobile-submit:hover {
-    background-color: #5a9a54;
-} 
+/* Mobile-specific adjustments */
+@media (max-width: 500px) {
+    .mobile-submit {
+        /* Ensure button is visible and properly sized on mobile */
+        display: block !important;  /* Force display */
+        width: 100%;
+        max-width: 200px;  /* Slightly smaller max-width for mobile */
+        margin: 12px auto 0 auto;  /* Slightly reduced margin */
+        padding: 12px 0;  /* Slightly reduced padding */
+        font-size: 1.1em;  /* Slightly smaller font */
+    }
+}
